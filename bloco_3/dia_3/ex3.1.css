@@ -1,0 +1,16 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    transform: scale(0.98);
+    cursor: default;
+}
+
+li:active {
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
