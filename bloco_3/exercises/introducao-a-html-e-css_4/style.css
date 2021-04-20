@@ -1,3 +1,8 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(231, 233, 230);
+}
+
 .header {
     background-color: rgb(177, 177, 177);
     font-size: 28px;
@@ -59,6 +64,17 @@ h1 {
     font-size: 17px;
     padding: 30px 20px;
     margin: 1px solid black;
+    height: 300px;
+    line-height: 30px;
+}
+
+.aside h3 {
+    margin-top: 0;
+}
+
+.aside li {
+    display: block;
+    padding-top: 7px;
 }
 
 .video {
