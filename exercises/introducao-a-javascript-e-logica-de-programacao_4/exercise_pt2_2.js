@@ -1,16 +1,17 @@
+let array = [2, 3, 6, 7, 10, 1];
+
 function retornaIndiceMaiorValor() {
     let maior = array[0];
     let indice = 0;
-    for (let i = 1; i < array.length; i++) {
-        if (array[i] > maior) {
-            maior = array[i];
-            indice = i;
+    for (let index = 1; index < array.length; index+=1) {
+        if (array[index] > maior) {
+            maior = array[index];
+            indice = index;
         }
     }
     return indice;
 }
 
-let array = [2, 3, 6, 7, 10, 1];
 console.log(retornaIndiceMaiorValor(array));
 
 // AJUDA EM: 
