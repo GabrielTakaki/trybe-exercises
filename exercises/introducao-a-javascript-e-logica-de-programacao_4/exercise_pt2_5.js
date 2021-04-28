@@ -28,11 +28,6 @@
 let numbers = [2, 3, 2, 5, 8, 2, 3];
 
 function numbersRep(array){
-
-    if(array.length === 0){
-        return null;
-    };   
-
     let modeMap = 0;
     let maxEl = array[0], maxCount = 1;
 
