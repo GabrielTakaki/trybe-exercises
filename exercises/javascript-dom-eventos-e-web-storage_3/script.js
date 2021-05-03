@@ -97,3 +97,22 @@ function itsFriday() {
     }
 }
 
+
+// EXERCICIO 6
+
+const allDays = document.querySelector('#days');
+
+allDays.addEventListener('mouseover', zoomIn);
+
+function zoomIn(e) {
+    e.target.style.fontSize = '30px';
+}
+
+days.addEventListener('mouseout', zoomOut)
+
+function zoomOut(e) {
+    e.target.style.fontSize = '20px';
+};
+
+
+// EXERCICIO 7
