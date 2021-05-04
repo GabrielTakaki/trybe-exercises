@@ -116,3 +116,35 @@ function zoomOut(e) {
 
 
 // EXERCICIO 7
+
+function createTask() {
+    const taskDiv = document.querySelector('.my-tasks');
+    const myTask = document.createElement('span');
+    myTask.innerText = 'Varrer a casa';
+    taskDiv.appendChild(myTask);
+
+
+    // EXERCICIO 8
+    function taskSubtitle(cor) {
+        const createDiv = document.createElement('div');
+        createDiv.className = 'task';
+        taskDiv.appendChild(createDiv);
+        createDiv.style.backgroundColor = cor;
+    }
+    taskSubtitle('green');
+}    
+createTask();
+
+
+// EXERCICIO 9
+
+const divTaskSel = document.querySelector('.task');
+divTaskSel.addEventListener('click', taskSelected);
+
+function taskSelected() {
+    if(divTaskSel.className === 'task selected') {
+        divTaskSel.className = 'task'
+    } else {
+        divTaskSel.className = 'task selected'
+    }
+}
