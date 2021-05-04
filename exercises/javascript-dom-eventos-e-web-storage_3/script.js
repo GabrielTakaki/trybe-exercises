@@ -148,3 +148,18 @@ function taskSelected() {
         divTaskSel.className = 'task selected'
     }
 }
+
+
+// EXERCICIO 10
+
+const mondayTask = document.querySelector('.day').nextElementSibling.nextElementSibling;
+
+mondayTask.addEventListener('click', taskDay);
+
+function taskDay() {
+    if(mondayTask.style.color === 'green') {
+        mondayTask.style.color = 'rgb(119,119,119)';
+    } else {
+        mondayTask.style.color = 'green';
+    }
+}
