@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-  <fieldset>
+  <fieldset class="first">
     <label for="name"> Nome Completo:
       <input type="text" id="name" max="40" required>
     </label>
@@ -36,12 +36,35 @@
       <option value="ba">Bahia</option>
     </select>
     <br>
-    <label for="casa">
+    <label for="casa" id="ap-casa">
       <input type="radio" name="local" id="casa" required>Casa
     </label>
-    <label for="ap">
+    <label for="ap" id="ap-casa">
       <input type="radio" name="local" id="ap" required>Apartamento
     </label>
   </fieldset>
+  <br>
+  <fieldset>
+    <p>Resumo do curriculo:</p>
+    <textarea cols="30" maxlength="1000" rows="10" required></textarea>
+    <br>
+    <label for="cargo">Cargo:
+      <input type="text" id="cargo" max="40" required>
+    </label>
+    <br>
+    <label for="description">Descriçao do cargo:
+      <input type="text" id="description" max="500" required>
+    </label>
+    <br>
+    <label for="start">Data de inicio:
+      <input type="date" id="start" max="8" class="initial" required>
+    </label>
+  </fieldset>
+  <br>
+  <button class="send" type="submit">Enviar</button>
+  <button class="clearAll">Limpar tudo</button>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
