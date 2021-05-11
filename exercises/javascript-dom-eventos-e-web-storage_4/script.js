@@ -77,7 +77,7 @@ window.onload = function() {
     function setStorage() {
         const backgroundColor = localStorage.getItem('backgroundColor');
         if(backgroundColor) pageColor(backgroundColor);
-
+        
         const fontColor = localStorage.getItem('fontColor');
         if(fontColor) setFontColor(fontColor);
 
@@ -86,9 +86,9 @@ window.onload = function() {
         
         const lineHeight = localStorage.getItem('lineHeight');
         if(lineHeight) setLineHeight(lineHeight);
-
+        
         const fontFamily = localStorage.getItem('fontFamily');
         if(fontFamily) setFontFamily(fontFamily);
     }
-    setStorage()
+    setStorage();
 }
