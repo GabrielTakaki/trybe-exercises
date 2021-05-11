@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <fieldset class="first">
+    <label for="name"> Nome Completo:
+      <input type="text" id="name" max="40" required>
+    </label>
+    <br>
+    <label for="e-mail">Seu E-mail:
+      <input type="email" id="e-mail" max="50" required>
+    </label>
+    <br>
+    <label for="cpf">Seu CPF:
+      <input type="text" id="cpf" max="11" required>
+    </label>
+    <br>
+    <label for="endereco">Seu Endereço:
+      <input type="text" id="endereco" max="200" required>
+    </label>
+    <br>
+    <label for="cidade">Sua Cidade:
+      <input type="text" id="cidade" max="28" required>
+    </label>
+    <br>
+    <select name="cidade" id="dropdown-estado">
+      <option value="sc">Santa Catarina</option>
+      <option value="pr">Parana</option>
+      <option value="pb">Pernambuco</option>
+      <option value="ba">Bahia</option>
+    </select>
+    <br>
+    <label for="casa" id="ap-casa">
+      <input type="radio" name="local" id="casa" required>Casa
+    </label>
+    <label for="ap" id="ap-casa">
+      <input type="radio" name="local" id="ap" required>Apartamento
+    </label>
+  </fieldset>
+  <br>
+  <fieldset>
+    <p>Resumo do curriculo:</p>
+    <textarea cols="30" maxlength="1000" rows="10" required></textarea>
+    <br>
+    <label for="cargo">Cargo:
+      <input type="text" id="cargo" max="40" required>
+    </label>
+    <br>
+    <label for="description">Descriçao do cargo:
+      <input type="text" id="description" max="500" required>
+    </label>
+    <br>
+    <label for="start">Data de inicio:
+      <input type="date" id="start" max="8" class="initial" required>
+    </label>
+  </fieldset>
+  <br>
+  <button class="send" type="submit">Enviar</button>
+  <button class="clearAll">Limpar tudo</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
