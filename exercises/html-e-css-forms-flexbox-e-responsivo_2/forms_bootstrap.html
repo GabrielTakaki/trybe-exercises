@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  <div class="container align-itens">
+    <fieldset class="first">
+      <label class="form-label py-3 mr-3" for="name"> Nome Completo:
+        <input class="form-control form-control-lg" type="text" id="name" max="40" required>
+      </label> 
+      
+      <label class="form-label mr-3" for="e-mail">Seu E-mail:
+        <input class="form-control form-control-lg" type="email" id="e-mail" max="50" required>
+      </label> 
+      
+      <label class="form-label mr-3" for="cpf">Seu CPF:
+        <input class="form-control form-control-lg" type="text" id="cpf" max="11" required>
+      </label>
+      
+      <label class="form-label mr-3" for="endereco">Seu Endereço:
+        <input class="form-control form-control-lg" type="text" id="endereco" max="200" required>
+      </label>
+      <label class="form-label" for="cidade">Sua Cidade:
+        <input class="form-control form-control-lg" type="text" id="cidade" max="28" required>
+      </label>
+      <div class="form-group mt-3">
+        <select class="form-control" name="cidade" id="dropdown-estado">
+          <option value="sc">Santa Catarina</option>
+          <option value="pr">Parana</option>
+          <option value="pb">Pernambuco</option>
+          <option value="ba">Bahia</option>
+        </select>
+      </div>
+      <div class="form-group ml-4">
+      <label class="form-label" for="casa" id="ap-casa">
+        <input class="form-check-input" type="radio" name="local" id="casa" required>Casa
+      </label>
+      </div>
+      <div class="form-group ml-4">
+      <label class="form-label" for="ap" id="ap-casa">
+        <input class="form-check-input" type="radio" name="local" id="ap" required>Apartamento
+      </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <p class="mt-2">Resumo do curriculo:</p>
+      <textarea class="form-control mb-4 mt-3" cols="30" maxlength="1000" rows="10" required></textarea>
+      
+      <label class="form-label mr-2" for="cargo">Cargo:
+        <input class="form-control" type="text" id="cargo" max="40" required>
+      </label>
+      
+      <label class="form-label mr-2" for="description">Descriçao do cargo:
+        <input class="form-control" type="text" id="description" max="500" required>
+      </label>
+      
+      <label class="form-label" for="start">Data de inicio:
+        <input class="form-control" type="date" id="start" max="8" class="initial" required>  
+      </label>  
+    </fieldset>
+    <button class="btn btn-success send" type="submit">Enviar</button>
+    <button class="btn btn-danger m-3 clearAll">Limpar tudo</button>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
