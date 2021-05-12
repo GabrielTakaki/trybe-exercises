@@ -1,10 +1,15 @@
 const btn = document.querySelector('.send');
-const clearAll = document.querySelector('.clearAll');
+const clearAll = document.querySelector('#clear');
 
-// btn.addEventListener('click', (e) => {
+const picker = new Pikaday({
+  field: document.getElementById('date'),
+  format: 'D MMM YYYY',
+  onSelect: function() {
+      console.log(this.getMoment().format('Do MMMM YYYY'));
+  }    
+});
 
-//   preventDefault();
-// })
+
 
 clearAll.addEventListener('click', (e) => {
   const inputVal = document.querySelectorAll('input');
@@ -13,5 +18,7 @@ clearAll.addEventListener('click', (e) => {
     inputVal[index].value = '';
     txtEl.value = '';
   }
+
   e.preventDefault();
 })
+
