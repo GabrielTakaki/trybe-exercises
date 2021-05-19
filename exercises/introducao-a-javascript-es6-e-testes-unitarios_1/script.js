@@ -10,3 +10,13 @@ function testingScope(escopo) {
 }
 
 testingScope(true);
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+// Seu código aqui.
+// AJUDA EM: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+oddsAndEvens.sort((a, b) => {
+  return a- b;
+});
+
+console.log(oddsAndEvens);
