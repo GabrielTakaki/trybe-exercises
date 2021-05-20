@@ -42,3 +42,11 @@ const objSize = (obj) => {
   return objLength;
 }
 console.log(objSize(lesson1));
+
+
+// Ex 4:
+const objValue = (obj) => {
+  const onlyObj = Object.values(obj);
+  return onlyObj;
+}
+console.log(objValue(lesson3))
