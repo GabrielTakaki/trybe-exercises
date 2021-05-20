@@ -20,10 +20,15 @@ const lesson3 = {
 
 // Ex 1:
 const turnoMatutino = (value, key1, key2) => {
-  const addingProp = Object.assign(value, key1, key2);
-  return addingProp;
+  value[key1] = key2;
 }
-console.log(turnoMatutino({}, lesson1, lesson2));
+turnoMatutino(lesson2, 'turno', 'matutino');
+
+// const turnoMatutino = (value, key1, key2) => {
+//   const addingProp = Object.assign(value, key1, key2);
+//   return addingProp;
+// }
+// console.log(turnoMatutino({}, lesson1, lesson2));
 
 
 // Ex 2:
@@ -49,4 +54,9 @@ const objValue = (obj) => {
   const onlyObj = Object.values(obj);
   return onlyObj;
 }
-console.log(objValue(lesson3))
+console.log(objValue(lesson3));
+
+
+// Ex 5:
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});;
+console.log(allLessons);
