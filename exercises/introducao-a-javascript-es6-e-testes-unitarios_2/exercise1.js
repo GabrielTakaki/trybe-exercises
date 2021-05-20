@@ -35,7 +35,7 @@ const order = {
 };
 
 const customerInfo = (order) => {
-  const message = `Ola ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, R. ${order.address.street}, N: ${order.address.number}, AP: ${order.address.apartment}`
+  const message = `Ola ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, R. ${order.address.street}, N: ${order.address.number}, AP: ${order.address.apartment}.`
   return message;
 }
 
@@ -43,8 +43,11 @@ console.log(customerInfo(order));
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
-
+  order.name = 'Luiz Silva';
+  order.payment.total = 'R$50,00';
+  const message2 = `Olá ${order.name}, o total do seu pedidio de muzzarella, calabresa e Coca-Cola Zero é ${order.payment.total}.`;
+  return message2;
 }
 
-orderModifier(order);
+console.log(orderModifier(order));
   
