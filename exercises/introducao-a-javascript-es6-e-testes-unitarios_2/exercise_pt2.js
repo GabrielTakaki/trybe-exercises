@@ -72,3 +72,12 @@ const sumStudants = (obj) => {
   return total;
 }
 console.log(sumStudants(allLessons));
+
+
+// Ex 7:
+const keyVal = (obj, value) => {
+  const getObjVal = Object.values(obj)[value];
+  return getObjVal
+}
+
+console.log(keyVal(lesson1, 0));
