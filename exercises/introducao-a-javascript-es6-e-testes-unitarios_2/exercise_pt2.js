@@ -60,3 +60,15 @@ console.log(objValue(lesson3));
 // Ex 5:
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});;
 console.log(allLessons);
+
+
+// Ex 6:
+const sumStudants = (obj) => {
+  let total = 0;
+  const sum = Object.keys(obj);
+  for (let index in sum) {
+    total += obj[sum[index]].numeroEstudantes;
+  }
+  return total;
+}
+console.log(sumStudants(allLessons));
