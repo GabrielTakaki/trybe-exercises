@@ -18,8 +18,19 @@ const lesson3 = {
   turno: 'noite',
 };
 
+// Ex 1:
 const turnoMatutino = (value, key1, key2) => {
   const addingProp = Object.assign(value, key1, key2);
   return addingProp;
 }
-console.log(turnoMatutino({}, lesson1, lesson2))
+console.log(turnoMatutino({}, lesson1, lesson2));
+
+
+// Ex 2:
+const keyList = (obj) => {
+  const arrOfObj = Object.keys(obj);
+  for (let index in arrOfObj) {
+    console.log(`${arrOfObj[index]}`);
+  }
+}
+keyList(lesson1);
