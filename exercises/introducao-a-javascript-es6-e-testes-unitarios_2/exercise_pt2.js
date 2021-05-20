@@ -34,3 +34,11 @@ const keyList = (obj) => {
   }
 }
 keyList(lesson1);
+
+
+// Ex 3:
+const objSize = (obj) => {
+  const objLength = Object.keys(obj).length;
+  return objLength;
+}
+console.log(objSize(lesson1));
