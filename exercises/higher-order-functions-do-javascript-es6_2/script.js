@@ -183,7 +183,7 @@ const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
-  return books.every((year) => year.author.birthYear > 1900);
+  return books.every((year) => year.author.birthYear > 1900 && book.author.birthYear <= 2000);
 }
 
 everyoneWasBornOnSecXX()
@@ -199,7 +199,25 @@ const expectedResult = true;
 
 function someBookWasReleaseOnThe80s() {
   // escreva seu código aqui
-  return books.some((book) => book.releaseYear >= 1980);
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
+
+
+
+
+
+// EX7:
+const expectedResult = false;
+
+function authorUnique() {
+  // escreva seu código aqui
+  return books.every((book) => {
+    !books.some((bookSome) => {
+      (book.author.birthYear === bookSome.author.birthYear) && (book.author.name !== bookSome.author.name)
+    })
+  });
+}
+
+assert.strictEqual(authorUnique(), expectedResult);
