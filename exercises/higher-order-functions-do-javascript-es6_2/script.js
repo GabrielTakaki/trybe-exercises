@@ -177,4 +177,15 @@ function booksOrderedByReleaseYearDesc() {
 
 
 
+
 // EX5:
+const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+  return books.every((year) => year.author.birthYear > 1900);
+}
+
+everyoneWasBornOnSecXX()
+
+// assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
