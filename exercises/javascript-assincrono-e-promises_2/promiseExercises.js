@@ -1,11 +1,15 @@
-const promisse = new Promise((resolve, reject) => {
-  const arrRandom = Array.from({ length: 10 }, () => Math.floor(Math.random() * 50));
-  const arrSum = arrRandom.reduce((prev, curr) => prev + curr);
-  if (arrSum > 8000) {
-    return reject(arrSum);
-  }
-  resolve(arrSum)
-})
-.then(arrSum => `Sucesso, Promisse resolvida com sucesso! soma: ${arrSum}`)
-.then(msg => console.log(msg))
-.catch(arrSum => console.log(`Promisse rejeitada. ${arrSum}`))
+const fetchPromise = () => {
+  const promise = new Promise((resolve, reject) => {
+    const arrRandom = Array.from({ length: 10 }, () => Math.floor(Math.random() * 50));
+    const arrSum = arrRandom.map((number) => number * number)
+    .reduce((prev, curr) => prev + curr);
+    arrSum > 8000 ? reject(arrSum) : resolve(arrSum);
+  });
+
+  promise
+    .then(arrSum => [2, 3, 5, 10].map((number) => arrSum / number))
+    .then(msg => console.log(msg))
+    .catch(arrSum => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`))
+}
+
+fetchPromise();
