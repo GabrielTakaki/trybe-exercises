@@ -8,8 +8,9 @@ const fetchPromise = () => {
 
   promise
     .then(arrSum => [2, 3, 5, 10].map((number) => arrSum / number))
-    .then(msg => console.log(msg))
-    .catch(arrSum => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`))
+    .then(array => array.reduce((prev, curr) => prev + curr).toFixed(2))
+    .then(array => console.log(array))
+    .catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
 }
 
 fetchPromise();
