@@ -1,6 +1,7 @@
 // const { expect } = require('@jest/globals');
 // const { it } = require('jest-circus');
-const { expect, it } = require('@jest/globals');
+const { expect, it, test } = require('@jest/globals');
+const { reject } = require('lodash');
 // const { describe } = require('yargs');
 const { uppercase, findUserById, getUserName } = require('./script');
 
@@ -21,7 +22,17 @@ describe('Verificando resultado da funçao', () => {
   it('ve se o usauario e existente', () => {
     expect.assertions(1);
     return getUserName(4).then(users => {
-      expect(users).toBe('Mark')
+      expect(users).toBe('Mark');
     })
   })
+})
+
+
+// EX3:
+test('com async/await', async () => {
+  try {
+    await getUserName(5);
+  } catch (e) {
+    expect(e).toEqual(reject)
+  }
 })
