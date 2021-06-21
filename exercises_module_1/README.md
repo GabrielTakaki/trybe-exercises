@@ -1,1 +1,1 @@
-Aqui serão anexados os exercícios e projetos ao longo da minha experiência na Trybe!!
+Aqui serão anexados os exercícios do módulo 1, que trata sobre os fundamentos do Desenvolvimento Web!!
