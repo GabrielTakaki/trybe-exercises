@@ -1,0 +1,1 @@
+Exercícios do módulo 2 da Trybe, que trata com o front-end, mais precisamente o React.
