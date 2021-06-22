@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.pokemons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.eachPoke {
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
