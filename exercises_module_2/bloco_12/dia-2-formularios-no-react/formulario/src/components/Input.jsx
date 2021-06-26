@@ -2,7 +2,7 @@ import React from 'react';
 
 class Input extends React.Component {
   render() {
-    const { inputType, inputName, inputValue, inputOnChange, isRequired, maxLength } = this.props;
+    const { inputType, inputName, inputValue, inputOnChange, isRequired, maxLength, className, onBlur } = this.props;
     return(
       <input 
         type={ inputType }
@@ -11,6 +11,8 @@ class Input extends React.Component {
         onChange={ inputOnChange }
         required={ isRequired }
         maxLength={ maxLength }
+        className={ className }
+        onBlur={ onBlur }
       />
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from './Input';
+import './Forms.css'
 
 class Forms extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ class Forms extends React.Component {
     this.state ={
       name: '',
       email: '',
-      cpf: 0,
+      cpf: '',
       address: '',
       cidade: '',
       estado: '',
@@ -34,6 +35,12 @@ class Forms extends React.Component {
     });
   }
 
+  // validateCity = e => {
+  //   const regex = /^\d/;
+  //   const { cidade } = this.state;
+  //   const validate = e.target.value
+  // }
+
   validateAddress = address => address.replace(/[^\w\s]/gi, '')
 
   render() {  
@@ -43,7 +50,8 @@ class Forms extends React.Component {
     return (
       <div>
         <form className="form">
-          <fieldset>
+          <fieldset className="form-fieldset">
+
             Name: <Input 
               inputType="text"
               inputName="name"
@@ -51,8 +59,57 @@ class Forms extends React.Component {
               inputOnChange={ this.handleChange }
               isRequired
               maxLength="40"
+              className="inputs"
             />
-          </fieldset> 
+
+            Email:<Input 
+              inputOnChange={ this.handleChange }
+              inputValue={ email }
+              inputType="email"
+              inputName="email"
+              isRequired
+              maxLength="50"
+              className="inputs"
+            />
+
+            CPF: <Input
+              inputOnChange={ this.handleChange }
+              inputValue={ cpf }
+              inputType = "number"
+              className="inputs"
+              inputName = "cpf"
+              maxLength="11"
+              isRequired
+            />
+
+            Endereço: <Input 
+              inputOnChange={ this.handleChange }
+              inputValue={ endereco }
+              className="inputs"
+              maxLength="200"
+              isRequired
+            />
+
+            Cidade: <Input 
+              inputName="cidade"
+              inputValue={ cidade }
+              isRequired
+              maxLength="28"
+              inputOnChange={ this.handleChange }
+              onBlur={(e) =>{
+                if (e.target.value.match(/^\d/)) {
+                  e.target.value = '';
+                  this.setState({
+                    cidade: ''
+                  });
+                } else {
+                  return cidade
+                }}}
+            />
+
+          </fieldset>
+          <label>
+          </label>
         </form>
       </div>
     )
