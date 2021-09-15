@@ -2,7 +2,7 @@ import React from 'react';
 import Pokemons from './Pokemons';
 import '../App.css';
 
-class EachPokemon extends React.Component {
+class Pokemon extends React.Component {
   render() {
     const { pokemons } = this.props;
     return (
@@ -15,4 +15,4 @@ class EachPokemon extends React.Component {
   } 
 }
 
-export default EachPokemon;
+export default Pokemon;

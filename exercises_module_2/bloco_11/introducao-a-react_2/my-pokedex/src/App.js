@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
-import EachPokemon from './components/EachPokemon';
-import Pokemons from './components/Pokemons';
+import Pokemon from './components/Pokemon';
 import info from './data';
 
 class App extends React.Component {
@@ -23,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <section className='pokemons'>
-        <EachPokemon pokemons={ info } />
+        <Pokemon pokemons={ info } />
       </section>
     );
   }
